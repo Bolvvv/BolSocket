@@ -9,8 +9,7 @@
 #include <ctype.h>
 #include <sys/wait.h>
 #include <iostream>
-#include "../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstdio"
-
+#include <cstdio>
 int multi_process_server(){
     //建立socket
     int lfd = 0;
