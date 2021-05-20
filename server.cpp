@@ -1,13 +1,12 @@
 #include <sys/socket.h>
 #include <cstdio>
 #include <sys/types.h>
+#include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/uio.h>
 #include <unistd.h>
 #include <ctype.h>
-
-using namespace std;
-
+#include <iostream>
 #define SERV_PORT 9527
 
 int server(){
@@ -45,7 +44,9 @@ int server(){
     if(cfd == -1){
         perror("accept error");
     }
-
+    char client_IP[1024];
+    std::cout<<"client ip:"<<inet_ntop(PF_INET, &clit_addr.sin_addr.s_addr, client_IP, sizeof (client_IP))
+    <<"port:"<<ntohs(clit_addr.sin_port)<<std::endl;
     //read操作
     char buf[BUFSIZ];//初始化一个读取client的buf, 大小为4096
     int ret_size;
