@@ -3,4 +3,4 @@ project(BolSocket)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(BolSocket server.cpp test.cpp client.cpp)
+add_executable(BolSocket Multi-process_server.cpp)
