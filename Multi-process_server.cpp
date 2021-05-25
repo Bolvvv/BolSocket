@@ -1,13 +1,6 @@
 //
 // Created by bolvvv on 2021/5/20.
 //
-#include <netinet/in.h>
-#include<arpa/inet.h>
-#include <cctype>
-#include <sys/wait.h>
-#include <strings.h>
-#include <csignal>
-
 #include "wrap.h"
 
 void catch_child(int signum){
@@ -77,7 +70,4 @@ int multi_process_server(){
             perr_exit("fork error");
         }
     }
-}
-int main(){
-    multi_process_server();
 }

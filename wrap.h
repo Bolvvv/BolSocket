@@ -8,6 +8,12 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <iostream>
+#include <netinet/in.h>
+#include<arpa/inet.h>
+#include <cctype>
+#include <sys/wait.h>
+#include <strings.h>
+#include <csignal>
 void perr_exit(const char *s);
 int Accept(int fd, struct sockaddr_in *sa, socklen_t *salenptr);
 int Bind(int fd, const struct sockaddr_in *sa, socklen_t salen);
