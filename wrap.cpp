@@ -28,6 +28,7 @@ int Bind(int fd, const struct sockaddr_in *sa, socklen_t salen) {
 
 int Connect(int fd, const struct sockaddr_in *sa, socklen_t salen) {
     int connect_result = connect(fd, (struct sockaddr*)sa, salen);
+    std::cout<<"connect fd："<<fd<<std::endl;
     if(connect_result < 0){
         perr_exit("connect error");
     }

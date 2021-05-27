@@ -60,3 +60,6 @@
     }
     Close(listenfd);
 }
+//int main(){
+//    multi_io_switch_server();
+//}
