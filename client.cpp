@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
-#define SERV_PORT 9527
+#define SERV_PORT 9057
 
 int client(){
     //创建socket

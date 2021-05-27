@@ -4,7 +4,7 @@
 #include "wrap.h"
 
 #define BUFSIZ 1024
-#define SERV_PORT 9057
+#define SERV_PORT 9527
 
 [[noreturn]] void multi_io_switch_server(){
     int i, j, n, nready;
@@ -39,7 +39,7 @@
             perr_exit("select error");
         if(FD_ISSET(listenfd, &rset)){//有新的客户端连接请求，在这一步，rset会被修改
             clie_addr_len = sizeof clie_addr;
-            connfd = Accept(listenfd, &clie_addr, &clie_addr_len);//Accept不会阻塞
+            connfd = Accept(listenfd, &clie_addr, &clie_addr_len);//Accept不会阻塞，因为有select的存在，当调用Accept时已经可以确定有连接请求了
             FD_SET(connfd, &allset);//向监控文件描述符集合allset添加新的文件描述符connfd
 
             if(maxfd < connfd) maxfd = connfd;
@@ -60,6 +60,3 @@
     }
     Close(listenfd);
 }
-int main(){
-    multi_io_switch_server();
-};
