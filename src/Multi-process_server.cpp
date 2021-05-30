@@ -1,7 +1,7 @@
 //
 // Created by bolvvv on 2021/5/20.
 //
-#include "wrap.h"
+#include "../include/wrap.h"
 
 void catch_child(int signum){
     while((waitpid(0, nullptr, WNOHANG)) > 0);

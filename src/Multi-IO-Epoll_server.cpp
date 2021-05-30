@@ -2,7 +2,7 @@
 // Created by bolvvv on 2021/5/27.
 //
 
-#include "wrap.h"
+#include "../include/wrap.h"
 #include <sys/epoll.h>
 
 #define BUF_SIZE 1024
@@ -66,6 +66,6 @@
     }
     Close(lfd);
 }
-int main(){
-    multi_io_epoll_server();
-}
+//int main(){
+//    multi_io_epoll_server();
+//}

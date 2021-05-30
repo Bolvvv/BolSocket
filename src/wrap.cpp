@@ -2,7 +2,7 @@
 // Created by bolvvv on 2021/5/20.
 //
 
-#include "wrap.h"
+#include "../include/wrap.h"
 
 
 void perr_exit(const char *s) {

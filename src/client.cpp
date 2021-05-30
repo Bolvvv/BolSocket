@@ -5,7 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <netinet/in.h>
-#include "wrap.h"
+#include "../include/wrap.h"
 
 #define MAXLINE 80
 #define SERV_PORT 9527
