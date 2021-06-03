@@ -1,6 +1,4 @@
-#include "include/wrap.h"
-#include "src/event_test.cpp"
-#include <event2/event.h>
+#include "src/libevent_pipe/write_fifo.cpp"
 int main(){
-    test_event();
+    write_pipe();
 }

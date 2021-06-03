@@ -1,7 +1,5 @@
-#include "../include/wrap.h"
+#include "wrap.h"
 #include <event2/event.h>
-
-
 void test_event(){
     int i;
     struct event_base *base = event_base_new();
