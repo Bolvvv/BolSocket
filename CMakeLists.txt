@@ -9,6 +9,6 @@ include_directories("./include")
 include_directories(${INC_DIR})
 link_directories(${LINK_DIR})
 
-add_executable(BolSocket2 main.cpp src/wrap.cpp)
+add_executable(BolSocket2 main.cpp src/wrap.cpp src/libevent_bufferevent/server.cpp)
 
 target_link_libraries(BolSocket2 event)
